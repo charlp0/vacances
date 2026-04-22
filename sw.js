@@ -1,5 +1,5 @@
 // Service Worker — offline caching
-const CACHE = 'lyon-2026-v5';
+const CACHE = 'lyon-2026-v6';
 const ASSETS = [
   './',
   './index.html',

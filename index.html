@@ -573,8 +573,8 @@
 
   <!-- Infos -->
   <div class="infos">
-    <p><strong>🚄 Aller</strong><br>Dim 26, 09:00 → 10:56 Part-Dieu</p>
-    <p><strong>🚄 Retour</strong><br>Mer 29, 15:04 → 17:00 Paris</p>
+    <p><strong>🚄 Aller</strong><br>Dim 26, 09:00 → ~11:00 Lyon Perrache</p>
+    <p><strong>🚄 Retour</strong><br>Mer 29, ~15:00 Lyon Perrache → Paris</p>
     <p><strong>🏠 Airbnb Confluence</strong><br>54 Cours Charlemagne · 16h in / 10h out</p>
     <p><strong>👩 Marie</strong><br>Rue David Girin (Bellecour)</p>
   </div>
@@ -615,14 +615,15 @@
 
       <div class="slot">
         <div class="slot-head">
-          <span class="slot-time">10:56</span>
-          <span class="slot-title">🚄 Arrivée Lyon Part-Dieu</span>
+          <span class="slot-time">~11:00</span>
+          <span class="slot-title">🚄 Arrivée Lyon Perrache</span>
         </div>
         <ul>
-          <li>Métro B → Bellecour (10 min) puis 2 min à pied chez Marie</li>
+          <li><strong>10 min à pied</strong> chez Marie (Rue David Girin) ou Métro A → Bellecour (1 station)</li>
+          <li class="tip">💡 Perrache = gare la plus pratique pour votre séjour (Airbnb et Marie tout proches)</li>
         </ul>
         <div class="slot-actions">
-          <a class="action-btn" href="https://www.google.com/maps/dir/?api=1&destination=Rue+David+Girin+Lyon&travelmode=transit" target="_blank">🧭 Itinéraire Marie</a>
+          <a class="action-btn" href="https://www.google.com/maps/dir/?api=1&origin=Lyon+Perrache&destination=Rue+David+Girin+Lyon&travelmode=walking" target="_blank">🧭 Itinéraire Marie</a>
         </div>
       </div>
 
@@ -1078,17 +1079,21 @@
       <div class="slot">
         <div class="slot-head">
           <span class="slot-time">13:30 – 14:30</span>
-          <span class="slot-title">🚶 Direction Part-Dieu</span>
+          <span class="slot-title">🚶 Direction Lyon Perrache</span>
         </div>
         <ul>
-          <li>Métro A (Bellecour → Part-Dieu, 5 min)</li>
+          <li>Marche 10 min depuis Bellecour ou Métro A (1 station)</li>
+          <li class="tip">💡 Perrache = gare la plus proche, pas besoin de traverser la ville</li>
         </ul>
+        <div class="slot-actions">
+          <a class="action-btn" href="https://www.google.com/maps/dir/?api=1&destination=Lyon+Perrache&travelmode=transit" target="_blank">🧭 Itinéraire gare</a>
+        </div>
       </div>
 
       <div class="slot">
         <div class="slot-head">
-          <span class="slot-time">15:04</span>
-          <span class="slot-title">🚄 TGV → 17:00 Paris</span>
+          <span class="slot-time">~15:00</span>
+          <span class="slot-title">🚄 TGV Lyon Perrache → Paris</span>
         </div>
       </div>
 
@@ -1099,7 +1104,7 @@
       <ul>
         <li><strong>Halles de Lyon Paul Bocuse</strong> — Temple gastronomique · Souvenirs</li>
         <li><strong>Parc de la Tête d'Or</strong> — Dernière heure de plein air</li>
-        <li><strong>Westfield Part-Dieu</strong> — Pratique si pluie + gare à côté</li>
+        <li><strong>Halles de Lyon Paul Bocuse</strong> — Temple gastronomique à Part-Dieu pour souvenirs</li>
       </ul>
     </details>
   </div>
@@ -1168,12 +1173,12 @@
       <h3>🚄 Transport & hébergement</h3>
       <label class="check-item" data-id="resa-tgv-aller">
         <input type="checkbox">
-        <span>TGV aller (dim 26, 09:00)</span>
+        <span>TGV aller Paris → <strong>Lyon Perrache</strong> (dim 26)</span>
         <span class="meta">SNCF Connect</span>
       </label>
       <label class="check-item" data-id="resa-tgv-retour">
         <input type="checkbox">
-        <span>TGV retour (mer 29, 15:04)</span>
+        <span>TGV retour <strong>Lyon Perrache</strong> → Paris (mer 29)</span>
         <span class="meta">SNCF Connect</span>
       </label>
       <label class="check-item" data-id="resa-airbnb">
@@ -1325,7 +1330,7 @@
 const SPOTS = [
   { lat: 45.7406, lng: 4.8188, day: 'base', name: '🏠 Airbnb Confluence', info: '54 Cours Charlemagne' },
   { lat: 45.7568, lng: 4.8326, day: 'base', name: '👩 Chez Marie', info: 'Rue David Girin (Bellecour)' },
-  { lat: 45.7606, lng: 4.8596, day: 'base', name: '🚄 Part-Dieu', info: 'Gare TGV' },
+  { lat: 45.7485, lng: 4.8266, day: 'base', name: '🚄 Lyon Perrache', info: 'Gare TGV · 10 min à pied chez Marie' },
   // Dim
   { lat: 45.7800, lng: 4.8539, day: 'dim', name: '🦁 Parc Tête d\'Or', info: 'Zoo gratuit · Pédalos' },
   { lat: 45.7406, lng: 4.8175, day: 'dim', name: '🐛 Caterpilou', info: 'Aire de jeux géante' },

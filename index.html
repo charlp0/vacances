@@ -210,6 +210,38 @@
   /* Mini map */
   .day-map { height: 220px; width: 100%; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 14px; box-shadow: var(--shadow); }
 
+  /* Hero image per day */
+  .hero {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 14px;
+    box-shadow: var(--shadow);
+    display: block;
+  }
+
+  /* Photos in slots */
+  .slot-photo {
+    width: calc(100% + 28px);
+    margin: -12px -14px 10px;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .slot.has-photo { padding-top: 0; }
+
+  /* Resto photo (small thumbnail) */
+  .resto-photo {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin: 6px 0;
+  }
+
   /* Timeline */
   .timeline { position: relative; margin-left: 8px; padding-left: 20px; border-left: 3px solid var(--border); }
   .slot {
@@ -609,6 +641,8 @@
       <div class="meteo" data-date="2026-04-26">☀️ Chargement...</div>
     </div>
 
+    <img class="hero" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/General_view_-_Parc_de_la_T%C3%AAte_d%27Or_-_DSC05248.jpg/1280px-General_view_-_Parc_de_la_T%C3%AAte_d%27Or_-_DSC05248.jpg" alt="Parc de la Tête d'Or" loading="lazy">
+
     <div id="dim-map" class="day-map"></div>
 
     <div class="timeline">
@@ -638,7 +672,8 @@
         </ul>
       </div>
 
-      <div class="slot">
+      <div class="slot has-photo">
+        <img class="slot-photo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/General_view_-_Parc_de_la_T%C3%AAte_d%27Or_-_DSC05248.jpg/1280px-General_view_-_Parc_de_la_T%C3%AAte_d%27Or_-_DSC05248.jpg" alt="Parc Tête d'Or" loading="lazy">
         <div class="slot-head">
           <span class="slot-time">13:30 – 16:00</span>
           <span class="slot-title">🦁 Parc de la Tête d'Or</span>
@@ -679,7 +714,8 @@
         </ul>
       </div>
 
-      <div class="slot">
+      <div class="slot has-photo">
+        <img class="slot-photo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Lyon_1er_-_Rue_du_Major_Martin_-_Caf%C3%A9_des_F%C3%A9d%C3%A9rations_-_Fa%C3%A7ade.jpg/1280px-Lyon_1er_-_Rue_du_Major_Martin_-_Caf%C3%A9_des_F%C3%A9d%C3%A9rations_-_Fa%C3%A7ade.jpg" alt="Bouchon lyonnais" loading="lazy">
         <div class="slot-head">
           <span class="slot-time">19:30</span>
           <span class="slot-title">🍷 Dîner bouchon lyonnais</span>
@@ -741,11 +777,14 @@
       <div class="meteo" data-date="2026-04-27">⛅ Chargement...</div>
     </div>
 
+    <img class="hero" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Lyon_Basilique_Fourvi%C3%A8re.JPG/1280px-Lyon_Basilique_Fourvi%C3%A8re.JPG" alt="Basilique de Fourvière" loading="lazy">
+
     <div id="lun-map" class="day-map"></div>
 
     <div class="timeline">
 
-      <div class="slot">
+      <div class="slot has-photo">
+        <img class="slot-photo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Lyon_-_Mus%C3%A9e_des_Confluences_%2849525806051%29.jpg/1280px-Lyon_-_Mus%C3%A9e_des_Confluences_%2849525806051%29.jpg" alt="Musée des Confluences" loading="lazy">
         <div class="slot-head">
           <span class="slot-time">10:00 – 12:00</span>
           <span class="slot-title">🏛️ Musée des Confluences</span>
@@ -796,7 +835,8 @@
         </div>
       </div>
 
-      <div class="slot">
+      <div class="slot has-photo">
+        <img class="slot-photo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Traboule_courtyard_D_Lyon.jpg/1280px-Traboule_courtyard_D_Lyon.jpg" alt="Traboule Vieux Lyon" loading="lazy">
         <div class="slot-head">
           <span class="slot-time">14:00 – 17:00</span>
           <span class="slot-title">🏘️ Vieux Lyon + Fourvière</span>
@@ -872,11 +912,14 @@
       <div class="meteo" data-date="2026-04-28">⛅ Chargement...</div>
     </div>
 
+    <img class="hero" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Musee_des_Miniatures_et_Decors_de_Cinema_-_Rue_Saint-Jean%2C_Vieux_Lyon_%2835512302495%29.jpg/1280px-Musee_des_Miniatures_et_Decors_de_Cinema_-_Rue_Saint-Jean%2C_Vieux_Lyon_%2835512302495%29.jpg" alt="Musée Cinéma & Miniature" loading="lazy">
+
     <div id="mar-map" class="day-map"></div>
 
     <div class="timeline">
 
-      <div class="slot">
+      <div class="slot has-photo">
+        <img class="slot-photo" src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Lyon-aquarium-globalview.jpg" alt="Aquarium de Lyon" loading="lazy">
         <div class="slot-head">
           <span class="slot-time">10:00 – 12:00</span>
           <span class="slot-title">🐠 Aquarium de Lyon</span>
@@ -927,7 +970,8 @@
         </div>
       </div>
 
-      <div class="slot">
+      <div class="slot has-photo">
+        <img class="slot-photo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Musee_des_Miniatures_et_Decors_de_Cinema_-_Rue_Saint-Jean%2C_Vieux_Lyon_%2835512302495%29.jpg/1280px-Musee_des_Miniatures_et_Decors_de_Cinema_-_Rue_Saint-Jean%2C_Vieux_Lyon_%2835512302495%29.jpg" alt="Musée Cinéma & Miniature" loading="lazy">
         <div class="slot-head">
           <span class="slot-time">14:00 – 16:30</span>
           <span class="slot-title">🎬 Musée Cinéma & Miniature</span>
@@ -1016,6 +1060,8 @@
       <div class="meteo" data-date="2026-04-29">🌤️ Chargement...</div>
     </div>
 
+    <img class="hero" src="https://upload.wikimedia.org/wikipedia/commons/9/99/Place_Bellecour_Lyon.jpg" alt="Place Bellecour" loading="lazy">
+
     <div id="mer-map" class="day-map"></div>
 
     <div class="timeline">
@@ -1030,7 +1076,8 @@
         </ul>
       </div>
 
-      <div class="slot">
+      <div class="slot has-photo">
+        <img class="slot-photo" src="https://upload.wikimedia.org/wikipedia/commons/9/99/Place_Bellecour_Lyon.jpg" alt="Place Bellecour" loading="lazy">
         <div class="slot-head">
           <span class="slot-time">10:30 – 12:00</span>
           <span class="slot-title">🛍️ Balade Presqu'île</span>
@@ -1321,7 +1368,8 @@
 
 <div class="footer">
   <p>Préparé par <strong>Jarvis 🎩</strong> · MAJ : 22 avril 2026</p>
-  <p>⚠️ Prix indicatifs · Météo temps réel via Open-Meteo · Disponibles hors ligne</p>
+  <p>⚠️ Prix indicatifs · Météo temps réel via Open-Meteo · Mode hors-ligne disponible</p>
+  <p style="font-size: 10px; opacity: 0.7; margin-top: 8px;">Photos : <a href="https://commons.wikimedia.org" target="_blank">Wikimedia Commons</a> (CC BY-SA) · Cartes : © OpenStreetMap</p>
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -1388,8 +1436,11 @@ function selectTab(dayId) {
   const targetId = dayId === 'map' ? 'map-view' : dayId;
   tabs.forEach(t => t.classList.toggle('active', t.dataset.day === dayId));
   document.querySelectorAll('.day').forEach(d => d.classList.toggle('active', d.id === targetId));
-  if (targetId === 'map-view' && window.mainMap) setTimeout(() => window.mainMap.invalidateSize(), 50);
-  ['dim', 'lun', 'mar', 'mer'].forEach(d => { if (window[d + 'Map']) setTimeout(() => window[d + 'Map'].invalidateSize(), 50); });
+  if (targetId === 'map-view' && window.mainMap) setTimeout(() => window.mainMap.invalidateSize(), 80);
+  // Refit the day map that just became visible — fixes the "zoomed out to world" bug
+  if (['dim', 'lun', 'mar', 'mer'].includes(dayId) && typeof refitDayMap === 'function') {
+    setTimeout(() => refitDayMap(dayId), 80);
+  }
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 tabs.forEach(t => t.addEventListener('click', () => selectTab(t.dataset.day)));
@@ -1467,11 +1518,12 @@ SPOTS.forEach(s => {
     .bindPopup(`<strong>${s.name}</strong><br><span style="font-size:12px;color:#555">${s.info}</span>`);
 });
 
-// Mini maps per day
+// Mini maps per day — store bounds so we can refit when tab becomes visible
+const dayMapBounds = {};
 ['dim', 'lun', 'mar', 'mer'].forEach(day => {
   const container = document.getElementById(day + '-map');
   if (!container) return;
-  const dayMap = L.map(container, { zoomControl: false, attributionControl: false });
+  const dayMap = L.map(container, { zoomControl: true, attributionControl: false });
   window[day + 'Map'] = dayMap;
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(dayMap);
   const daySpots = SPOTS.filter(s => s.day === day || s.day === 'base');
@@ -1482,8 +1534,20 @@ SPOTS.forEach(s => {
       .addTo(group);
   });
   group.addTo(dayMap);
-  dayMap.fitBounds(group.getBounds().pad(0.15));
+  const bounds = group.getBounds().pad(0.15);
+  dayMapBounds[day] = bounds;
+  dayMap.fitBounds(bounds);
 });
+
+// Fix zoom for maps initialized while hidden (display:none) — refit on tab change
+function refitDayMap(day) {
+  const map = window[day + 'Map'];
+  const bounds = dayMapBounds[day];
+  if (map && bounds) {
+    map.invalidateSize();
+    map.fitBounds(bounds);
+  }
+}
 
 // ============ WEATHER (Open-Meteo) ============
 async function loadWeather() {

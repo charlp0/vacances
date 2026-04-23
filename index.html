@@ -185,7 +185,29 @@
   .tab[data-day="lun"].active { background: var(--lun); }
   .tab[data-day="mar"].active { background: var(--mar); }
   .tab[data-day="mer"].active { background: var(--mer); }
-  .tab[data-day="map"].active, .tab[data-day="recap"].active, .tab[data-day="checklist"].active, .tab[data-day="infos"].active { background: var(--text); }
+  .tab[data-day="map"].active, .tab[data-day="recap"].active, .tab[data-day="checklist"].active, .tab[data-day="infos"].active, .tab[data-day="airbnb"].active { background: var(--text); }
+
+  /* Airbnb section */
+  .airbnb-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; margin-bottom: 14px; box-shadow: var(--shadow); }
+  .airbnb-card h3 { font-size: 15px; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; color: var(--text); }
+  .airbnb-card h3 .badge-color { display: inline-block; width: 4px; height: 18px; border-radius: 2px; }
+  .airbnb-card ul { list-style: none; padding: 0; }
+  .airbnb-card li { padding: 4px 0 4px 18px; font-size: 13px; position: relative; color: var(--muted); }
+  .airbnb-card li::before { content: '→'; position: absolute; left: 0; color: var(--dim); }
+  .airbnb-card strong { color: var(--text); }
+  .airbnb-card.checkin { border-left: 4px solid #22c55e; }
+  .airbnb-card.checkout { border-left: 4px solid #dc2626; }
+  .airbnb-card.wifi { border-left: 4px solid #3b82f6; }
+  .airbnb-card.rules { border-left: 4px solid #f59e0b; }
+  .airbnb-photo { width: 100%; border-radius: 8px; margin-top: 8px; box-shadow: var(--shadow); display: block; }
+  .airbnb-photo-caption { font-size: 11px; color: var(--muted); text-align: center; margin-top: 4px; font-style: italic; }
+  .code-box { background: var(--text); color: var(--bg); font-family: 'Menlo', 'Monaco', monospace; font-size: 18px; font-weight: 700; padding: 10px 14px; border-radius: 8px; letter-spacing: 2px; display: inline-flex; align-items: center; gap: 10px; margin: 6px 0; cursor: pointer; transition: transform 0.1s; }
+  .code-box:active { transform: scale(0.97); }
+  .code-box .copy-hint { font-family: -apple-system, sans-serif; font-size: 10px; opacity: 0.6; font-weight: 400; letter-spacing: 0; }
+  .wifi-pwd { display: inline-block; background: #fef3c7; color: #92400e; padding: 2px 8px; border-radius: 4px; font-family: monospace; font-weight: 700; }
+  [data-theme="dark"] .wifi-pwd { background: #78350f; color: #fde68a; }
+  .pwd-missing { background: #fee2e2; color: #991b1b; padding: 6px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; }
+  [data-theme="dark"] .pwd-missing { background: #7f1d1d; color: #fecaca; }
 
   /* Day panels */
   .day { display: none; }
@@ -638,6 +660,7 @@
     <div class="tab" data-day="mar">🟢 Mar</div>
     <div class="tab" data-day="mer">🟣 Mer</div>
     <div class="tab" data-day="map">🗺️ Carte</div>
+    <div class="tab" data-day="airbnb">🏠 Airbnb</div>
     <div class="tab" data-day="checklist">✅ À réserver</div>
     <div class="tab" data-day="recap">💰 Budget</div>
     <div class="tab" data-day="infos">☎️ Infos</div>
@@ -1183,6 +1206,93 @@
       <div><span class="dot" style="background:#22c55e"></span>Mardi</div>
       <div><span class="dot" style="background:#7c3aed"></span>Mercredi</div>
       <div><span class="dot" style="background:#ec4899"></span>Base (Airbnb · Marie · Gare)</div>
+    </div>
+  </div>
+
+  <!-- ============ AIRBNB ============ -->
+  <div class="day" id="airbnb">
+    <h2 style="margin-bottom: 14px;">🏠 Airbnb Confluence</h2>
+
+    <div class="airbnb-card">
+      <h3>📍 Adresse</h3>
+      <ul>
+        <li><strong>54 Cours Charlemagne, 69002 Lyon</strong></li>
+        <li>Quartier Confluence (Lyon 2e)</li>
+        <li>2e étage · Appartement à droite (sans nom sur la porte)</li>
+      </ul>
+      <div class="slot-actions" style="margin-top: 10px;">
+        <a class="action-btn" href="https://www.google.com/maps/dir/?api=1&destination=54+Cours+Charlemagne+Lyon&travelmode=transit" target="_blank">🧭 Google Maps</a>
+        <a class="action-btn" href="https://guest.yaago.com/#/guest/69d4200934f5673d2d484f8d/mobile" target="_blank">📱 Guide Yaago complet</a>
+      </div>
+    </div>
+
+    <div class="airbnb-card checkin">
+      <h3>🔑 Arrivée · Check-in à partir de 16h</h3>
+      <ul>
+        <li><strong>Étape 1 — Boîte à clés :</strong> support à vélo au <strong>10 Rue Ravat</strong>, à l'angle du Cours Charlemagne</li>
+      </ul>
+      <img class="airbnb-photo" src="images/airbnb/arrivee-1-rue.jpg" alt="Localisation boîte à clés depuis la rue" loading="lazy">
+      <div class="airbnb-photo-caption">Vue depuis l'angle de la rue — la boîte à clés est à gauche</div>
+      <img class="airbnb-photo" src="images/airbnb/arrivee-2-boite-cles.jpg" alt="Boîte à clés en gros plan" loading="lazy">
+      <div class="airbnb-photo-caption">La boîte à clés sur le support à vélo</div>
+
+      <p style="margin-top: 12px; font-size: 13px;"><strong>Code boîte à clés :</strong></p>
+      <div class="code-box" onclick="navigator.clipboard.writeText('1102');toast('Code copié : 1102')">1102 <span class="copy-hint">Cliquez pour copier</span></div>
+      <ul>
+        <li>Entrez le code <strong>1102</strong>, retirez les clés</li>
+        <li>Refermez le boîtier puis <strong>affichez 0000</strong> (remise à zéro obligatoire)</li>
+      </ul>
+
+      <p style="margin-top: 12px; font-size: 13px;"><strong>Étape 2 — Accès appartement :</strong></p>
+      <ul>
+        <li>Entrez dans l'immeuble au <strong>54 Cours Charlemagne</strong> avec le <strong>badge Vigik noir</strong> (dans le trousseau)</li>
+        <li>Couloir → ascenseur → <strong>2e étage</strong> → appartement à droite (sans nom)</li>
+      </ul>
+    </div>
+
+    <div class="airbnb-card wifi">
+      <h3>📡 Wi-Fi</h3>
+      <ul>
+        <li>Réseau : <span class="wifi-pwd">Carla4lione</span></li>
+        <li>Mot de passe : <span class="pwd-missing">⚠️ À récupérer sur Yaago (cliquer sur l'icône Wi-Fi)</span></li>
+      </ul>
+    </div>
+
+    <div class="airbnb-card rules">
+      <h3>📋 Règles pendant le séjour</h3>
+      <ul>
+        <li><strong>Chauffage :</strong> maximum 20,5°C (appartement efficace, pas besoin de plus)</li>
+        <li><strong>Poubelles :</strong> local poubelles dans la cour intérieure de l'immeuble au RDC</li>
+      </ul>
+    </div>
+
+    <div class="airbnb-card checkout">
+      <h3>🚪 Départ · Check-out à 10h au plus tard</h3>
+      <p style="font-size: 13px; margin-bottom: 8px;"><strong>Avant de quitter l'appartement :</strong></p>
+      <ul>
+        <li>✅ Faire la vaisselle (ou lance-vaisselle)</li>
+        <li>✅ Vider le réfrigérateur</li>
+        <li>✅ Jeter les poubelles au local RDC (cour intérieure)</li>
+        <li>✅ Éteindre toutes les lumières + sèche-serviette</li>
+        <li>✅ Chauffage réglé à <strong>19°C</strong></li>
+        <li>✅ Fermer la porte à clés</li>
+      </ul>
+      <p style="margin-top: 10px; font-size: 13px;"><strong>🚨 TRÈS IMPORTANT — Clés :</strong></p>
+      <ul>
+        <li>Remettre les clés dans la boîte à clés (code <strong>1102</strong>)</li>
+        <li>Refermer la boîte et <strong>afficher 0000</strong> (molette)</li>
+      </ul>
+    </div>
+
+    <div class="airbnb-card">
+      <h3>📌 Mémo rapide</h3>
+      <ul>
+        <li>🔑 Boîte à clés (10 rue Ravat) : <strong>1102</strong></li>
+        <li>🏠 Appart : 54 Cours Charlemagne, 2e étage droite</li>
+        <li>📡 Wi-Fi : Carla4lione</li>
+        <li>⏰ Check-in : 16h · Check-out : 10h</li>
+        <li>🌡️ Chauffage max : 20,5°C</li>
+      </ul>
     </div>
   </div>
 
